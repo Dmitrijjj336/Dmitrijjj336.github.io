@@ -28,10 +28,10 @@
 
         .hero {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* ✅ Занимает весь экран по высоте */
-            padding: 0 20px;
+            justify-content: flex-start;  /* было center */
+            align-items: flex-start;      /* было center */
+            min-height: 100vh;
+            padding: 20px;                /* отступ от краёв экрана */
             position: relative;
             background-color: #ffffff;
         }
@@ -60,13 +60,14 @@
         .content {
             position: relative;
             z-index: 3;
-            text-align: center;
+            text-align: left;             /* было center */
             color: white;
             max-width: 800px;
-            padding: 40px;
+            padding: 0;                   /* было 40px */
         }
 
         h1 {
+            margin-top: 0;                /* убирает лишний верхний отступ */
             font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 20px;
             font-weight: 700;
